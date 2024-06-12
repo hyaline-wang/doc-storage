@@ -24,12 +24,11 @@ jobs:
           version: 8
       - name: Install deps
         run: |
-          echo 123
-          ls
           cd docs
-          echo 234
           ls
           pnpm install
+          echo >>>>
+          ls
           
         
         
