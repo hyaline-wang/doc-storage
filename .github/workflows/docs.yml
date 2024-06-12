@@ -25,7 +25,9 @@ jobs:
           version: 8
       - name: Install deps
         run: |
+          ls
           cd docs
+          ls
           pnpm install
           
         
