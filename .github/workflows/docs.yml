@@ -27,7 +27,7 @@ jobs:
           cd docs
           ls
           pnpm install
-          echo >>>>
+          echo 22222222
           ls
           
         
