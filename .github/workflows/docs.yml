@@ -22,7 +22,9 @@ jobs:
         with:
           # 选择要使用的 pnpm 版本
           version: 8
-          
+      - name: Install deps
+        run: pnpm install
+        
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
