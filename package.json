@@ -2,13 +2,16 @@
   "name": "vuepress-quickstart",
   "version": "0.2.0",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider vuepress dev docs",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider vuepress build docs"
   },
   "devDependencies": {
     "vuepress": "^1.5.3"
   },
   "description": "Starter template for a VuePress project - including CI for GH Pages hosting",
   "author": "MichaelCurrin",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  }
 }
