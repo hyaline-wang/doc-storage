@@ -24,7 +24,10 @@ jobs:
           # 选择要使用的 pnpm 版本
           version: 8
       - name: Install deps
-        run: pnpm install
+        run: |
+          cd docs
+          pnpm install
+          
         
         
       - name: Setup Node.js
