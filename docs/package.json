@@ -1,0 +1,14 @@
+{
+  "name": "vuepress-quickstart",
+  "version": "0.2.0",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  },
+  "description": "Starter template for a VuePress project - including CI for GH Pages hosting",
+  "author": "MichaelCurrin",
+  "license": "MIT"
+}
