@@ -37,7 +37,10 @@ jobs:
       # run build script
       - name: Build VuePress site
         run: pnpm build
-
+      # add CNAME
+      - name: Add CNAME
+        run: cp CNAME docs/.vuepress/dist
+        
       # please check out the docs of the workflow for more details
       # @see https://github.com/crazy-max/ghaction-github-pages
       - name: Deploy to GitHub Pages
