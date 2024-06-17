@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'VuePress Docs Boilerplate',
+  title: '整理的知识库',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -56,9 +56,21 @@ module.exports = {
           children: [
             '',
             'using-vue',
+            'vio2vision_pose',
+
           ]
         }
       ],
+      // '/config/': [
+      //   {
+      //     title: 'Config',
+      //     collapsable: false,
+      //     children: [
+      //       '',
+      //       'usb_pav',
+      //     ]
+      //   }
+      // ],
     }
   },
 

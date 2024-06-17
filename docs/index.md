@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: https://v1.vuepress.vuejs.org/hero.png
-tagline: Starter template for a VuePress project
+tagline: 知识库
 actionText: Quick Start →
 actionLink: /guide/
 features:
@@ -16,4 +16,4 @@ footer: Made by MichaelCurrin with ❤️
 
 This project's source on GitHub:
 
-[![MichaelCurrin - vuepress-quickstart](https://img.shields.io/static/v1?label=MichaelCurrin&message=vuepress-quickstart&color=blue&logo=github)](https://github.com/MichaelCurrin/vuepress-quickstart)
+<!-- [![MichaelCurrin - vuepress-quickstart](https://img.shields.io/static/v1?label=MichaelCurrin&message=vuepress-quickstart&color=blue&logo=github)](https://github.com/MichaelCurrin/vuepress-quickstart) -->
