@@ -57,6 +57,8 @@ module.exports = {
             '',
             'using-vue',
             'vio2vision_pose',
+            'use_mavros',
+            'edge_firmware'
 
           ]
         }
