@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vim Edge2 固件编译 | 整理的知识库</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="Starter template for a VuePress project - including CI for GH Pages hosting">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.7c8934a5.css" as="style"><link rel="preload" href="/assets/js/app.6d198f1d.js" as="script"><link rel="preload" href="/assets/js/2.b95ab0d4.js" as="script"><link rel="preload" href="/assets/js/1.f6aabd51.js" as="script"><link rel="preload" href="/assets/js/29.8120d476.js" as="script"><link rel="prefetch" href="/assets/js/10.da99f91e.js"><link rel="prefetch" href="/assets/js/11.fb29814a.js"><link rel="prefetch" href="/assets/js/12.dcd6975f.js"><link rel="prefetch" href="/assets/js/13.664b4e1f.js"><link rel="prefetch" href="/assets/js/14.fbd642a5.js"><link rel="prefetch" href="/assets/js/15.553d0dc9.js"><link rel="prefetch" href="/assets/js/16.b9da07d3.js"><link rel="prefetch" href="/assets/js/17.d28cd808.js"><link rel="prefetch" href="/assets/js/18.5adb74f5.js"><link rel="prefetch" href="/assets/js/19.fbf09d3f.js"><link rel="prefetch" href="/assets/js/20.baeb890a.js"><link rel="prefetch" href="/assets/js/21.1ad0ca31.js"><link rel="prefetch" href="/assets/js/22.da80316e.js"><link rel="prefetch" href="/assets/js/23.fcf219bc.js"><link rel="prefetch" href="/assets/js/24.fffa759f.js"><link rel="prefetch" href="/assets/js/25.0521cc8b.js"><link rel="prefetch" href="/assets/js/26.cc085127.js"><link rel="prefetch" href="/assets/js/27.3c7a1991.js"><link rel="prefetch" href="/assets/js/28.83a6bbe8.js"><link rel="prefetch" href="/assets/js/3.e08a0bbc.js"><link rel="prefetch" href="/assets/js/30.e57deda6.js"><link rel="prefetch" href="/assets/js/31.41e6fb06.js"><link rel="prefetch" href="/assets/js/32.6a160d46.js"><link rel="prefetch" href="/assets/js/33.6c2cf308.js"><link rel="prefetch" href="/assets/js/34.b378bfc5.js"><link rel="prefetch" href="/assets/js/4.bf78d947.js"><link rel="prefetch" href="/assets/js/5.55af9590.js"><link rel="prefetch" href="/assets/js/6.5d247747.js"><link rel="prefetch" href="/assets/js/7.baaa9855.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.77260563.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7c8934a5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">整理的知识库</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  Guide
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  Config
+</a></div><div class="nav-item"><a href="https://v1.vuepress.vuejs.org" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  Guide
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  Config
+</a></div><div class="nav-item"><a href="https://v1.vuepress.vuejs.org" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vim Edge2 固件编译</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/edge_firmware.html#如何手动编译固件" class="sidebar-link">如何手动编译固件</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/guide/edge_firmware.html#中文支持" class="sidebar-link">中文支持</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/guide/edge_firmware.html#软件安装" class="sidebar-link">软件安装</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/edge_firmware.html#realsense-sdk" class="sidebar-link">realsense_sdk</a></li><li class="sidebar-sub-header"><a href="/guide/edge_firmware.html#realsense-driver-install" class="sidebar-link">realsense driver install</a></li><li class="sidebar-sub-header"><a href="/guide/edge_firmware.html#foxglove" class="sidebar-link">foxglove</a></li></ul></li><li><a href="/guide/edge_firmware.html#接口信息" class="sidebar-link">接口信息</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vim-edge2-固件编译"><a href="#vim-edge2-固件编译" class="header-anchor">#</a> Vim Edge2 固件编译</h1> <h2 id="如何手动编译固件"><a href="#如何手动编译固件" class="header-anchor">#</a> 如何手动编译固件</h2> <p>khadas为他们家的板子提供了一键编译固件的方法。<a href="https://github.com/khadas/fenix" target="_blank" rel="noopener noreferrer">https://github.com/khadas/fenix<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>可以使用docker 快速配置环境
+容器创建好了后只有条命令需要执行。</p> <div class="language-bash nums extra-class"><pre class="language-bash"><code><span class="token builtin class-name">source</span> env/setenv.sh
+<span class="token assign-left variable">DOWNLOAD_MIRROR</span><span class="token operator">=</span>china <span class="token function">make</span>
+</code></pre></div><p>docker 在第一次配置时有点慢，之后在编就快很多了，8分钟左右能编完。
+如果想用 windows 上的rk-dev-tool 进行烧录，那么 <strong>不选 raw</strong></p> <p>编译固件时，需要使用/dev/loop 设备，但是 snap 似乎会占用掉，找到了一个办法，删掉snap，虽然不优雅，但是管用，似乎也没有什么副作用。</p> <p><a href="https://blog.csdn.net/shyjhyp11/article/details/109839033" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/shyjhyp11/article/details/109839033<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="中文支持"><a href="#中文支持" class="header-anchor">#</a> 中文支持</h2> <p>似乎默认的 dbus 有问题，一直无法安装语言，报错为</p> <div class="language-bash extra-class"><pre class="language-bash"><code>FileNotFoundError: <span class="token punctuation">[</span>Errno <span class="token number">2</span><span class="token punctuation">]</span> 没有那个文件或目录: <span class="token string">'/var/crash/_usr_bin_gnome-language-selector.0.crash'</span>
+</code></pre></div><p>提示中，中文是乱码</p> <p>命令行运行设置，报错为</p> <div class="language-bash extra-class"><pre class="language-bash"><code>** <span class="token punctuation">(</span>gnome-control-center:2905<span class="token punctuation">)</span>: WARNING **: <span class="token number">10</span>:10:00.953: Error calling GetAll<span class="token punctuation">(</span><span class="token punctuation">)</span> when retrieving properties <span class="token keyword">for</span> /org/freedesktop/Accounts/User0: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.DBus.Properties” on object at path /org/freedesktop/Accounts/User0
+Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>:
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/dbus/bus.py&quot;</span>, line <span class="token number">177</span>, <span class="token keyword">in</span> activate_name_owner
+    <span class="token builtin class-name">return</span> self.get_name_owner<span class="token punctuation">(</span>bus_name<span class="token punctuation">)</span>
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/dbus/bus.py&quot;</span>, line <span class="token number">361</span>, <span class="token keyword">in</span> get_name_owner
+    <span class="token builtin class-name">return</span> self.call_blocking<span class="token punctuation">(</span>BUS_DAEMON_NAME, BUS_DAEMON_PATH,
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/dbus/connection.py&quot;</span>, line <span class="token number">652</span>, <span class="token keyword">in</span> call_blocking
+    reply_message <span class="token operator">=</span> self.send_message_with_reply_and_block<span class="token punctuation">(</span>
+dbus.exceptions.DBusException: org.freedesktop.DBus.Error.NameHasNoOwner: Could not get owner of name <span class="token string">'org.debian.apt'</span><span class="token builtin class-name">:</span> no such name
+
+During handling of the above exception, another exception occurred:
+
+Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>:
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/defer/__init__.py&quot;</span>, line <span class="token number">487</span>, <span class="token keyword">in</span> _inline_callbacks
+    result <span class="token operator">=</span> gen.send<span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/aptdaemon/client.py&quot;</span>, line <span class="token number">1623</span>, <span class="token keyword">in</span> _run_transaction_helper
+    daemon <span class="token operator">=</span> get_aptdaemon<span class="token punctuation">(</span>self.bus<span class="token punctuation">)</span>
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/aptdaemon/client.py&quot;</span>, line <span class="token number">1709</span>, <span class="token keyword">in</span> get_aptdaemon
+    <span class="token builtin class-name">return</span> dbus.Interface<span class="token punctuation">(</span>bus.get_object<span class="token punctuation">(</span><span class="token string">&quot;org.debian.apt&quot;</span>,
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/dbus/bus.py&quot;</span>, line <span class="token number">241</span>, <span class="token keyword">in</span> get_object
+    <span class="token builtin class-name">return</span> self.ProxyObjectClass<span class="token punctuation">(</span>self, bus_name, object_path,
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/dbus/proxies.py&quot;</span>, line <span class="token number">250</span>, <span class="token keyword">in</span> __init__
+    self._named_service <span class="token operator">=</span> conn.activate_name_owner<span class="token punctuation">(</span>bus_name<span class="token punctuation">)</span>
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/dbus/bus.py&quot;</span>, line <span class="token number">182</span>, <span class="token keyword">in</span> activate_name_owner
+    self.start_service_by_name<span class="token punctuation">(</span>bus_name<span class="token punctuation">)</span>
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/dbus/bus.py&quot;</span>, line <span class="token number">277</span>, <span class="token keyword">in</span> start_service_by_name
+    <span class="token builtin class-name">return</span> <span class="token punctuation">(</span>True, self.call_blocking<span class="token punctuation">(</span>BUS_DAEMON_NAME, BUS_DAEMON_PATH,
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/dbus/connection.py&quot;</span>, line <span class="token number">652</span>, <span class="token keyword">in</span> call_blocking
+    reply_message <span class="token operator">=</span> self.send_message_with_reply_and_block<span class="token punctuation">(</span>
+dbus.exceptions.DBusException: org.freedesktop.DBus.Error.Spawn.ExecFailed: Failed to execute program org.debian.apt: Permission denied
+Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>:
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/dbus/bus.py&quot;</span>, line <span class="token number">177</span>, <span class="token keyword">in</span> activate_name_owner
+    <span class="token builtin class-name">return</span> self.get_name_owner<span class="token punctuation">(</span>bus_name<span class="token punctuation">)</span>
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/dbus/bus.py&quot;</span>, line <span class="token number">361</span>, <span class="token keyword">in</span> get_name_owner
+    <span class="token builtin class-name">return</span> self.call_blocking<span class="token punctuation">(</span>BUS_DAEMON_NAME, BUS_DAEMON_PATH,
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/dbus/connection.py&quot;</span>, line <span class="token number">652</span>, <span class="token keyword">in</span> call_blocking
+    reply_message <span class="token operator">=</span> self.send_message_with_reply_and_block<span class="token punctuation">(</span>
+dbus.exceptions.DBusException: org.freedesktop.DBus.Error.NameHasNoOwner: Could not get owner of name <span class="token string">'org.debian.apt'</span><span class="token builtin class-name">:</span> no such name
+
+During handling of the above exception, another exception occurred:
+
+Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>:
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/defer/__init__.py&quot;</span>, line <span class="token number">487</span>, <span class="token keyword">in</span> _inline_callbacks
+    result <span class="token operator">=</span> gen.send<span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/aptdaemon/client.py&quot;</span>, line <span class="token number">1623</span>, <span class="token keyword">in</span> _run_transaction_helper
+    daemon <span class="token operator">=</span> get_aptdaemon<span class="token punctuation">(</span>self.bus<span class="token punctuation">)</span>
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/aptdaemon/client.py&quot;</span>, line <span class="token number">1709</span>, <span class="token keyword">in</span> get_aptdaemon
+    <span class="token builtin class-name">return</span> dbus.Interface<span class="token punctuation">(</span>bus.get_object<span class="token punctuation">(</span><span class="token string">&quot;org.debian.apt&quot;</span>,
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/dbus/bus.py&quot;</span>, line <span class="token number">241</span>, <span class="token keyword">in</span> get_object
+    <span class="token builtin class-name">return</span> self.ProxyObjectClass<span class="token punctuation">(</span>self, bus_name, object_path,
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/dbus/proxies.py&quot;</span>, line <span class="token number">250</span>, <span class="token keyword">in</span> __init__
+    self._named_service <span class="token operator">=</span> conn.activate_name_owner<span class="token punctuation">(</span>bus_name<span class="token punctuation">)</span>
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/dbus/bus.py&quot;</span>, line <span class="token number">182</span>, <span class="token keyword">in</span> activate_name_owner
+    self.start_service_by_name<span class="token punctuation">(</span>bus_name<span class="token punctuation">)</span>
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/dbus/bus.py&quot;</span>, line <span class="token number">277</span>, <span class="token keyword">in</span> start_service_by_name
+    <span class="token builtin class-name">return</span> <span class="token punctuation">(</span>True, self.call_blocking<span class="token punctuation">(</span>BUS_DAEMON_NAME, BUS_DAEMON_PATH,
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/dbus/connection.py&quot;</span>, line <span class="token number">652</span>, <span class="token keyword">in</span> call_blocking
+    reply_message <span class="token operator">=</span> self.send_message_with_reply_and_block<span class="token punctuation">(</span>
+dbus.exceptions.DBusException: org.freedesktop.DBus.Error.Spawn.ExecFailed: Failed to execute program org.debian.apt: Permission denied
+
+During handling of the above exception, another exception occurred:
+
+Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>:
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/aptdaemon/client.py&quot;</span>, line <span class="token number">1582</span>, <span class="token keyword">in</span> _run_transaction
+    deferred <span class="token operator">=</span> self._run_transaction_helper<span class="token punctuation">(</span>method_name, args, wait,
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/defer/__init__.py&quot;</span>, line <span class="token number">597</span>, <span class="token keyword">in</span> unwind_generator
+    <span class="token builtin class-name">return</span> _inline_callbacks<span class="token punctuation">(</span>None, func<span class="token punctuation">(</span>*args, **kwargs<span class="token punctuation">)</span>, Deferred<span class="token punctuation">(</span><span class="token punctuation">))</span>
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/defer/__init__.py&quot;</span>, line <span class="token number">533</span>, <span class="token keyword">in</span> _inline_callbacks
+    deferred.errback<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/defer/__init__.py&quot;</span>, line <span class="token number">359</span>, <span class="token keyword">in</span> errback
+    self._next<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/defer/__init__.py&quot;</span>, line <span class="token number">414</span>, <span class="token keyword">in</span> _next
+    sys.excepthook<span class="token punctuation">(</span>self.result.type, self.result.value,
+  File <span class="token string">&quot;/usr/lib/python3/dist-packages/apport_python_hook.py&quot;</span>, line <span class="token number">153</span>, <span class="token keyword">in</span> apport_excepthook
+    with os.fdopen<span class="token punctuation">(</span>os.open<span class="token punctuation">(</span>pr_filename,
+FileNotFoundError: <span class="token punctuation">[</span>Errno <span class="token number">2</span><span class="token punctuation">]</span> 没有那个文件或目录: <span class="token string">'/var/crash/_usr_bin_gnome-language-selector.0.crash'</span>
+
+</code></pre></div><p><a href="https://askubuntu.com/questions/789966/software-updates-crashes-and-will-not-open" target="_blank" rel="noopener noreferrer">https://askubuntu.com/questions/789966/software-updates-crashes-and-will-not-open<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>似乎是dbus 的问题，解决方法</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">aptitude</span> reinstall <span class="token function">apt</span> apt-utils aptdaemon aptdaemon-data update-manager update-manager-core dbus
+</code></pre></div><h2 id="软件安装"><a href="#软件安装" class="header-anchor">#</a> 软件安装</h2> <h3 id="realsense-sdk"><a href="#realsense-sdk" class="header-anchor">#</a> realsense_sdk</h3> <h3 id="realsense-driver-install"><a href="#realsense-driver-install" class="header-anchor">#</a> realsense driver install</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> libusb-1.0-0-dev
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> xorg-dev libglu1-mesa-dev
+<span class="token function">git</span> clone https://github.com/IntelRealSense/librealsense.git
+<span class="token builtin class-name">cd</span> 
+<span class="token function">mkdir</span> build
+<span class="token builtin class-name">cd</span> build
+cmake <span class="token punctuation">..</span>
+<span class="token function">make</span> <span class="token parameter variable">-j8</span>
+<span class="token function">sudo</span> <span class="token function">make</span> <span class="token function">install</span>
+</code></pre></div><p>https://github.com/openMVG/openMVG/issues/85
+https://github.com/IntelRealSense/librealsense/issues/5518</p> <p><strong>D430i</strong>
+当D435i 缺少RGB摄像头时，设备会被识别为D430i。在x86设备中 realsense-veiwer 会将其识别，并正常使用，但是当使用realsense-ros,会提示</p> <blockquote><p>Unsupported device! Product ID: 0x0B4B</p></blockquote> <p>幸运的是 在4.54.1 (2023-06-27) 版本中，添加了这个支持 ，可惜，新版本不支持ROS1
+https://index.ros.org/p/realsense2_camera/</p> <h3 id="foxglove"><a href="#foxglove" class="header-anchor">#</a> foxglove</h3> <p>edge2 的性能远远不如 nuc ，因此开一个 rviz基本上性能就占用完了。
+可以使用 foxglove 远程可视化，注意不要传图像</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># https://github.com/foxglove/ros-foxglove-bridge</span>
+<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> ros-<span class="token variable">$ROS_DISTRO</span>-foxglove-bridge
+
+roslaunch <span class="token parameter variable">--screen</span> foxglove_bridge foxglove_bridge.launch port:<span class="token operator">=</span><span class="token number">8765</span>
+</code></pre></div><p>launch 的写法</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>launch</span><span class="token punctuation">&gt;</span></span>
+  <span class="token comment">&lt;!-- Including in another launch file --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>include</span> <span class="token attr-name">file</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>$(find foxglove_bridge)/launch/foxglove_bridge.launch<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>arg</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>port<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>8765<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token comment">&lt;!-- ... other arguments ... --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>include</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>launch</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="接口信息"><a href="#接口信息" class="header-anchor">#</a> 接口信息</h2> <p>注意 ：有一个是**usb 2.0 **。</p> <table><thead><tr><th>特征</th> <th>值</th></tr></thead> <tbody><tr><td>重量</td> <td>57g(含散热器)</td></tr> <tr><td>尺寸</td> <td></td></tr> <tr><td>功率</td> <td>12v 2A （需要稳压）</td></tr> <tr><td>性能</td> <td></td></tr></tbody></table></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.6d198f1d.js" defer></script><script src="/assets/js/2.b95ab0d4.js" defer></script><script src="/assets/js/1.f6aabd51.js" defer></script><script src="/assets/js/29.8120d476.js" defer></script>
+  </body>
+</html>
